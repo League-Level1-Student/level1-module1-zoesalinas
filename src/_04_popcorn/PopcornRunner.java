@@ -7,6 +7,10 @@ package _04_popcorn;
  */
 public class PopcornRunner {
 public static void main(String[] args) {
-	
+Microwave micro = new Microwave();
+Popcorn pop = new Popcorn("butter");
+micro.putInMicrowave(pop);
+micro.setTime(5);
+micro.startMicrowave();
 }
 }
