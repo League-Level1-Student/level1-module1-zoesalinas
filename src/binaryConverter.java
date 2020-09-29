@@ -10,13 +10,13 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class binaryConverter implements MouseListener{
-public void run() {
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 	JTextField field = new JTextField(20);
 	JButton button = new JButton("convert");
-	button.addMouseListener(this);
 	JLabel label = new JLabel();
+public void run() {
+	button.addMouseListener(this);
 	panel.add(field);
 	panel.add(button);
 	panel.add(label);
@@ -46,7 +46,10 @@ String convert(String input) {
 @Override
 public void mouseClicked(MouseEvent arg0) {
 	// TODO Auto-generated method stub
-	System.out.println("click");
+	String binary = field.getText();
+	String output = convert(binary);
+	label.setText(output);
+	frame.pack();
 }
 @Override
 public void mouseEntered(MouseEvent arg0) {
